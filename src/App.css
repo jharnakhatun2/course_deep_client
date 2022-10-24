@@ -36,3 +36,14 @@
     transform: rotate(360deg);
   }
 }
+
+/* Login and registration form responsivename */
+.section{
+  background: url("./components/images/bg1.png") no-repeat fixed center;
+}
+.regis-section{
+  max-width: 100%;
+background: url("./components/images/gbgg.png") no-repeat fixed center;
+background-size: cover;
+}
+
