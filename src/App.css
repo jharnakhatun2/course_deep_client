@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=EB+Garamond:wght@400;500;600;700&family=Lobster&family=Poppins:wght@300;400&display=swap');
 
-body,html{
+h1, h2{
   font-family: 'EB Garamond', serif;
 }
 
@@ -31,6 +31,15 @@ p{
   background-color: #ffc107;
   color: #100f0f!important;
   border-radius: 5px;
+}
+.headerBG{
+  max-width: 100%;
+  background: url("./components/images/course.png") no-repeat fixed center;
+  background-size: cover;
+  height:60vh;
+}
+.fontColor{
+  color: #bdbaba;
 }
 
 .App-header {
@@ -67,6 +76,13 @@ background: url("./components/images/gbgg.png") no-repeat fixed center;
 background-size: cover;
 }
 
+/* Course Layout */
+section{
+  display: grid;
+  grid-gap: 1rem;
+}
+
+
 /*Footer Design*/
 .footer{
   display: grid;
@@ -86,8 +102,17 @@ background-size: cover;
 
 /* responsive section */
 @media screen and (min-width: 600px){
+  section{
+    grid-template-columns: auto auto;
+    margin: 0 auto;
+ }
   .footer{
-      grid-template-columns: auto auto;
-   
+      grid-template-columns: auto auto;  
    }
+}
+@media screen and (min-width: 913px){
+  section{
+     grid-template-columns: auto auto auto;
+     margin: 0 auto;
+  }
 }

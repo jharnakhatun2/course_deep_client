@@ -1,6 +1,7 @@
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 import './App.css';
 import Blog from './components/Blog';
+import Course from './components/Course';
 import './components/Courses';
 import Courses from './components/Courses';
 import Faq from './components/Faq';
@@ -19,7 +20,14 @@ function App() {
       children: [
         {
           path: "/",
+          loader: async ()=>{
+            return fetch('http://localhost:5000/courses')
+          },
           element: <Courses />,
+        },
+        {
+          path: "/course/:id",
+          element: <Course />,
         },
         {
           path: "/faq",
@@ -45,7 +53,7 @@ function App() {
     },
   ]);
   return (
-    <div className="App">
+    <div>
       <RouterProvider router={router}></RouterProvider>
     </div>
   );
