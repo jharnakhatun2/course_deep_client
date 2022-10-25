@@ -1,5 +1,6 @@
 import React, { useContext } from 'react';
-import { Link } from 'react-router-dom';
+import { Container, Nav, Navbar} from 'react-bootstrap';
+import { Link, NavLink} from 'react-router-dom';
 import { AuthContext } from '../layer/UserContext';
 
 const Header = () => {
@@ -13,25 +14,28 @@ const Header = () => {
   }
 
   return (
-    <div className="navbar bg-neutral text-primary-content">
-      <div className="flex-1">
-        <Link to='/' className="btn btn-ghost normal-case text-warning text-xl">daisyUI</Link>
-      </div>
-      <div className="flex-none">
-        <ul className="menu menu-horizontal p-0">
-          <li><Link to='/' >Home</Link></li>
-          <li><Link to='/order' >Order</Link></li>
-          <li><Link to="/register">Register</Link></li>
-          {/* toggle login and logout button */}
-          {
+    <Navbar bg="dark" variant="dark" expand="lg">
+      <Container>
+        <Navbar.Brand className="navbar-brand text-warning clogo"><h3>CourseDeep</h3></Navbar.Brand>
+        <Navbar.Toggle aria-controls="basic-navbar-nav" />
+        <Navbar.Collapse id="basic-navbar-nav">
+          <Nav className="ms-auto d-flex">
+            <NavLink className ="{({isActive})=> isActive ? 'active' : undefined} nav-link px-3" to='/' >Courses</NavLink>
+            <NavLink className ="nav-link px-3" to='/faq' >FAQ</NavLink>
+            <NavLink className ="nav-link px-3" to='/blog' >Blog</NavLink>
+            <NavLink className ="nav-link px-3" to='/order' >Order</NavLink>
+            <NavLink className ="nav-link px-3" to="/register">Register</NavLink>
+            {/* toggle login and logout button */}
+            {
               user?.email?
-              <li onClick ={handleLogOut}><Link to=''>Log Out</Link></li>
-              : <li><Link to='/login'>Log In</Link></li>
-          }
-          <li>{user?.email && <span>{user?.email}</span>}</li>
-        </ul>
-      </div>
-    </div>
+              <li onClick ={handleLogOut}><NavLink className ="nav-link px-3" to=''>Log Out</NavLink></li>
+              : <NavLink  className ="nav-link px-3" to='/login'>Log In</NavLink>
+            }
+            {user?.email && <span>{user?.email}</span>}
+         </Nav>
+        </Navbar.Collapse>
+      </Container>
+    </Navbar>
   )
 };
 

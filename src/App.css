@@ -1,3 +1,16 @@
+@import url('https://fonts.googleapis.com/css2?family=EB+Garamond:wght@400;500;600;700&family=Lobster&family=Poppins:wght@300;400&display=swap');
+
+body,html{
+  font-family: 'EB Garamond', serif;
+}
+
+.clogo{
+  font-family: 'Lobster', cursive;
+}
+p{
+  font-family: 'Poppins', sans-serif;
+  font-weight: 300;
+}
 .App {
   text-align: center;
 }
@@ -11,6 +24,13 @@
   .App-logo {
     animation: App-logo-spin infinite 20s linear;
   }
+}
+
+/* Header Style */
+.active{
+  background-color: #ffc107;
+  color: #100f0f!important;
+  border-radius: 5px;
 }
 
 .App-header {
@@ -47,3 +67,27 @@ background: url("./components/images/gbgg.png") no-repeat fixed center;
 background-size: cover;
 }
 
+/*Footer Design*/
+.footer{
+  display: grid;
+  grid-template-columns: auto;
+  align-items: center;
+  justify-items: center;
+  padding: 2rem 0;
+}
+.footer-text{
+  color: #afafaf;
+}
+.fa-style{
+  color: #ffc107;;
+  margin: 0 .2rem;
+  font-size: 20px;
+}
+
+/* responsive section */
+@media screen and (min-width: 600px){
+  .footer{
+      grid-template-columns: auto auto;
+   
+   }
+}

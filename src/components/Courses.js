@@ -5,7 +5,7 @@
 import { useContext } from "react"
 import { AuthContext } from "../layer/UserContext"
 
-const Home = () => {
+const Courses = () => {
   const { user } = useContext(AuthContext)
   return (
     <div className="hero min-h-screen bg-base-200">
@@ -20,4 +20,4 @@ const Home = () => {
   )
 }
 
-export default Home
+export default Courses;
