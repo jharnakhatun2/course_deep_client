@@ -4,7 +4,7 @@
 
 import { useContext } from "react"
 import { Card, Col, Container, Row } from "react-bootstrap"
-import { useLoaderData } from "react-router-dom"
+import { Link, useLoaderData } from "react-router-dom"
 import RightSideBar from "../layer/RightSideBar"
 import { AuthContext } from "../layer/UserContext"
 import { BsStarFill, BsStarHalf} from "react-icons/bs";
@@ -31,9 +31,9 @@ const Courses = () => {
                   courseData.map((course) => {
                         const { id, name, image, description,price,ratings,shortDes,teacher,time } = course;
                         return <Card style={{ width: '18rem' }} key={id}>
-                        <Card.Img className="mw-100" variant="top" src={image} />
+                        <Card.Img  className="mw-100" variant="top" src={image} />
                         <Card.Body>
-                          <Card.Title>{name}</Card.Title>
+                          <Card.Title><Link to={`/course/${id}`}>{name}</Link></Card.Title>
                           <Card.Text>{shortDes.length < 30 ? shortDes : shortDes.slice(0, 60) + "..." }</Card.Text>
                           <div className="d-flex justify-content-between">
                           <Card.Text>{teacher}</Card.Text>
