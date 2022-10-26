@@ -5,6 +5,7 @@ import Blogs from './components/Blogs';
 import Course from './components/Course';
 import './components/Courses';
 import Courses from './components/Courses';
+import Error from './components/Error';
 import Faq from './components/Faq';
 import Login from './components/Login';
 import Register from './components/Register';
@@ -66,6 +67,10 @@ function App() {
         {
           path: "/login",
           element: <Login />,
+        },
+        {
+          path:'*', 
+          element:<Error/>
         }
       ]
     },
