@@ -1,7 +1,8 @@
 import React, { useContext, useState } from 'react';
+import { Button, Form } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 import { AuthContext } from '../layer/UserContext';
-import img from './images/demo.png';
+import { FcGoogle, IconName } from "react-icons/fc";
 
 const Register = () => {
 
@@ -43,44 +44,40 @@ const Register = () => {
 
     
     return (
-        <div className="hero min-h-screen bg-base-200 regis-section mx-auto">
-            <div className="hero-content flex-col lg:flex-row-reverse">
-                    <img  src={img} alt="" />
-                <div className="p-5 flex-shrink-0 w-full max-w-sm shadow-2xl bg-base-100 rounded">
-                    <h1 className="text-3xl font-bold">Register now!</h1>
-                    <div className="card max-w-sm">
-                        <form onSubmit={handleRegister} className="card-body">
-                            <div className="form-control">
-                                <label className="label">
-                                    <span className="label-text">Your Name :</span>
-                                </label>
-                                <input type="text" name='name' placeholder="name" className="input input-bordered" required />
-                            </div>
-                            <div className="form-control">
-                                <label className="label">
-                                    <span className="label-text">Your Email :</span>
-                                </label>
-                                <input type="email" name='email' placeholder="email" className="input input-bordered" required/>
-                            </div>
-                            <div className="form-control">
-                                <label className="label">
-                                    <span className="label-text">Your Password : </span>
-                                </label>
-                                <input type="password" name="password" placeholder="password" className="input input-bordered" required/>
-                                <label className="label">
+        <div className="regis-section">
+        <div className="p-5">
+          <h1 className="text-3xl font-bold text-center">Register now!</h1>
+          <div className="w-50 mx-auto bg-light rounded p-5">
+          <Form onSubmit={handleRegister}>
 
-                                    <small>Already have an account?<Link to="/login" className="btn btn-active btn-link">Log In</Link></small>
-                                </label>
-                            </div>
-                            <div className="form-control mt-6">
-                                <button className="btn btn-warning">Register</button>
-                            </div>
-                        </form>
-                        <button onClick={handleGoogleSignIn} className="btn btn-outline btn-success">Google SignIn</button>
-                    </div>
-                </div>
+            <Form.Group className="mb-3" controlId="formBasicEmail">
+              <Form.Label>Your Name :</Form.Label>
+              <Form.Control type="text" name="name" placeholder="Enter name" required />
+            </Form.Group>
+            <Form.Group className="mb-3" controlId="formBasicEmail">
+              <Form.Label>Email</Form.Label>
+              <Form.Control type="email" name="email" placeholder="Enter email" required />
+            </Form.Group>
+            <Form.Group className="mb-3" controlId="formBasicPassword">
+              <Form.Label>Password</Form.Label>
+              <Form.Control type="password" name='password' placeholder=" Enter password" required />
+  
+            </Form.Group>
+            <div>
+            <Form.Text className="text-muted">
+            Already have an account?<Link to="/login" className="btn btn-active btn-link">Log In</Link>
+            </Form.Text>
             </div>
+            <Button className="btn btn-warning w-100" type="submit">
+              Register
+            </Button>
+          </Form>
+          <div className="d-flex justify-content-between">
+          <button onClick={handleGoogleSignIn} className="btn btn-outline border-success my-3 w-50"><FcGoogle/> Google SignIn</button>
+          </div>
         </div>
+      </div>
+    </div>
     );
 };
 

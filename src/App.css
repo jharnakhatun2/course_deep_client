@@ -67,8 +67,10 @@ p{
 }
 
 /* Login and registration form responsivename */
-.section{
+.logInSection{
   background: url("./components/images/bg1.png") no-repeat fixed center;
+  min-height: 77vh;
+  background-size: cover;
 }
 .regis-section{
   max-width: 100%;
