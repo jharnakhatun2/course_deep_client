@@ -6,9 +6,9 @@ import './components/Courses';
 import Courses from './components/Courses';
 import Faq from './components/Faq';
 import Login from './components/Login';
-import Order from './components/Order';
 import Register from './components/Register';
 import Main from './layer/Main';
+import CheckOut from './routes/CheckOut';
 import PrivateRoutes from './routes/PrivateRoutes';
 
 
@@ -45,8 +45,8 @@ function App() {
           element: <Blog />,
         },
         {
-          path: "/order",
-          element: <PrivateRoutes><Order/></PrivateRoutes>,
+          path: "/checkout",
+          element: <PrivateRoutes><CheckOut/></PrivateRoutes>,
         },
         {
           path: "/register",

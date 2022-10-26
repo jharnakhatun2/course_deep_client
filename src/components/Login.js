@@ -10,7 +10,7 @@ const Login = () => {
   // When login, will go to home page
   const navigate = useNavigate();
   const location = useLocation();
-  const from = location.state?.from?.pathname || '/order';
+  const from = location.state?.from?.pathname || '/checkout';
 
   const handleLogin = event =>{
     event.preventDefault();

@@ -23,7 +23,6 @@ const Header = () => {
             <NavLink className ="{({isActive})=> isActive ? 'active' : undefined} nav-link px-3" to='/' >Courses</NavLink>
             <NavLink className ="nav-link px-3" to='/faq' >FAQ</NavLink>
             <NavLink className ="nav-link px-3" to='/blog' >Blog</NavLink>
-            <NavLink className ="nav-link px-3" to='/order' >Order</NavLink>
             <NavLink className ="nav-link px-3" to="/register">Register</NavLink>
             {/* toggle login and logout button */}
             {
@@ -32,6 +31,8 @@ const Header = () => {
               : <NavLink  className ="nav-link px-3" to='/login'>Log In</NavLink>
             }
             {user?.email && <span>{user?.email}</span>}
+           
+            <NavLink className ="nav-link px-3" to='/checkout' >CheckOut</NavLink>
          </Nav>
         </Navbar.Collapse>
       </Container>
