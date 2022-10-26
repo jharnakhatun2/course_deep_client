@@ -2,11 +2,12 @@ import React, { useContext, useState } from 'react';
 import { Button, Form } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 import { AuthContext } from '../layer/UserContext';
-import { FcGoogle, IconName } from "react-icons/fc";
+import { FcGoogle} from "react-icons/fc";
+import { BsGithub} from "react-icons/bs";
 
 const Register = () => {
 
-    const {createUser, googleSignIn} = useContext(AuthContext);
+    const {createUser, googleSignIn, gitHubSignIn} = useContext(AuthContext);
     const [error, setError] = useState(null);
     const handleRegister = event =>{
         event.preventDefault();
@@ -34,6 +35,15 @@ const Register = () => {
 
     const handleGoogleSignIn =()=>{
         googleSignIn()
+        .then(result => {
+            const user = result.user;
+            console.log(user);
+        })
+        .catch(error => console.error(error))
+    }
+
+    const handleGithubSignIn =()=>{
+        gitHubSignIn()
         .then(result => {
             const user = result.user;
             console.log(user);
@@ -74,6 +84,9 @@ const Register = () => {
           </Form>
           <div className="d-flex justify-content-between">
           <button onClick={handleGoogleSignIn} className="btn btn-outline border-success my-3 w-50"><FcGoogle/> Google SignIn</button>
+          </div>
+          <div className="d-flex justify-content-between">
+          <button onClick={handleGithubSignIn} className="btn btn-outline bg-dark text-white w-50"><BsGithub/> Github SignIn</button>
           </div>
         </div>
       </div>

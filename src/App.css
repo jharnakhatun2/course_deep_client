@@ -78,6 +78,11 @@ background: url("./components/images/gbgg.png") no-repeat fixed center;
 background-size: cover;
 }
 
+.profileImg{
+  width: 30px;
+    height: 30px;
+    border-radius: 17px
+}
 /* Course Layout */
 section{
   display: grid;
