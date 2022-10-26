@@ -2,11 +2,11 @@
 // import { Link } from 'react-router-dom'
 // import { AuthContext } from '../contexts/UserContext'
 
-import { useContext } from "react"
-import { Card, Col, Container, Row } from "react-bootstrap"
-import { Link, useLoaderData } from "react-router-dom"
-import RightSideBar from "../layer/RightSideBar"
-import { AuthContext } from "../layer/UserContext"
+import { useContext } from "react";
+import { Card, Col, Container, Row } from "react-bootstrap";
+import { Link, useLoaderData } from "react-router-dom";
+import RightSideBar from "../layer/RightSideBar";
+import { AuthContext } from "../layer/UserContext";
 import { BsStarFill, BsStarHalf} from "react-icons/bs";
 
 const Courses = () => {

@@ -82,6 +82,23 @@ section{
   grid-gap: 1rem;
 }
 
+/* Blog Style */
+.topicHeader{
+  font-family: serif;
+  margin-bottom: 1rem;
+}
+.cardDesc{
+  text-align: justify;
+  margin-bottom: 5px;
+  color: #747473;
+}
+.cardFooter{
+  color: #0e1611;
+  font-weight: 600;
+}
+.cardFooter:hover{
+  color:#ffc107 ;
+}
 
 /*Footer Design*/
 .footer{

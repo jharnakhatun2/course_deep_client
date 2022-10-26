@@ -1,6 +1,7 @@
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 import './App.css';
 import Blog from './components/Blog';
+import Blogs from './components/Blogs';
 import Course from './components/Course';
 import './components/Courses';
 import Courses from './components/Courses';
@@ -42,6 +43,16 @@ function App() {
         },
         {
           path: "/blog",
+          loader: async ()=>{
+            return fetch('http://localhost:5000/blog')
+          },
+          element: <Blogs />,
+        },
+        {
+          path: "/blog/:id",
+          loader: async ({params})=>{
+            return fetch(`http://localhost:5000/blog/${params.id}`)
+          },
           element: <Blog />,
         },
         {

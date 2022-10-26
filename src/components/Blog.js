@@ -1,9 +1,13 @@
 import React from 'react';
+import {useLoaderData } from "react-router-dom";
 
 const Blog = () => {
+    const singleBlogData = useLoaderData();
+    const { id, title, desc } = singleBlogData;
     return (
-        <div>
-            
+        <div className="w-75 mx-auto p-5 m-5">
+            <h3 className="mb-4 topicHeader">{title}</h3>
+            <p className="cardDesc">{desc}</p>
         </div>
     );
 };
