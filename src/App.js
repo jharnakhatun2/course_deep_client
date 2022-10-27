@@ -23,14 +23,14 @@ function App() {
         {
           path: "/",
           loader: async ()=>{
-            return fetch('http://localhost:5000/courses')
+            return fetch('https://assignment-ten-server-sage.vercel.app/courses')
           },
           element: <Courses />,
         },
         {
           path: "/course/:id",
           loader: async ({params})=>{
-            return fetch(`http://localhost:5000/courses/${params.id}`)
+            return fetch(`https://assignment-ten-server-sage.vercel.app/courses/${params.id}`)
           },
           element: <Course />,
         },
@@ -45,14 +45,14 @@ function App() {
         {
           path: "/blog",
           loader: async ()=>{
-            return fetch('http://localhost:5000/blog')
+            return fetch('https://assignment-ten-server-sage.vercel.app/blog')
           },
           element: <Blogs />,
         },
         {
           path: "/blog/:id",
           loader: async ({params})=>{
-            return fetch(`http://localhost:5000/blog/${params.id}`)
+            return fetch(`https://assignment-ten-server-sage.vercel.app/blog/${params.id}`)
           },
           element: <Blog />,
         },

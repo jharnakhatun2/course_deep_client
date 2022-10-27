@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 const RightSideBar = () => {
     const [categories, setCategories] = useState([]);
     useEffect(()=>{
-        fetch(`http://localhost:5000/category`)
+        fetch(`https://assignment-ten-server-sage.vercel.app/category`)
         .then(res => res.json())
         .then(data => setCategories(data));
     }, [])
