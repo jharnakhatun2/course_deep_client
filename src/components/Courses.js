@@ -1,7 +1,3 @@
-// import { useContext } from 'react'
-// import { Link } from 'react-router-dom'
-// import { AuthContext } from '../contexts/UserContext'
-
 import { useContext } from "react";
 import { Card, Col, Container, Row } from "react-bootstrap";
 import { Link, useLoaderData } from "react-router-dom";
@@ -17,9 +13,9 @@ const Courses = () => {
     <div className="hero min-h-screen bg-base-200">
       <div className="hero-content text-center headerBG" >
         <div className="max-w-md vw-100 mx-auto p-5 ">
-          <h1 className="text-5xl font-bold text-white pt-6">Hello there</h1>
-          <p className=" fontColor " >Provident cupiditate voluptatem et in. Quaerat fugiat ut assumenda excepturi exercitationem quasi. In deleniti eaque aut repudiandae et a id nisi.</p>
-          <button className="btn btn-warning shadow-2xl">Get Started</button>
+          <h1 className="text-5xl font-bold text-white pt-6">Learn Without Limit</h1>
+          <p className=" fontColor w-50 w-sm-100  mx-auto " >Start, switch, or advance your career with more than 5,200 courses, Professional Certificates, and degrees from world-class Web Skilled Courses.</p>
+          <button className="btn btn-warning shadow-2xl"><Link className="text-decoration-none text-white" to='/register'>JOIN FOR FREE</Link></button>
         </div>
       </div>
       <Container >
@@ -30,20 +26,24 @@ const Courses = () => {
                 {
                   courseData.map((course) => {
                         const { id, name, image, description,price,ratings,shortDes,teacher,time } = course;
-                        return <Card style={{ width: '18rem' }} key={id}>
+                        return <Card className="mx-auto" style={{ width: '18rem' }} key={id}>
                         <Card.Img  className="mw-100" variant="top" src={image} />
                         <Card.Body>
-                          <Card.Title><Link to={`/course/${id}`}>{name}</Link></Card.Title>
+                          <Card.Title><Link className="text-decoration-none" to={`/course/${id}`}>{name}</Link></Card.Title>
                           <Card.Text>{shortDes.length < 30 ? shortDes : shortDes.slice(0, 60) + "..." }</Card.Text>
                           <div className="d-flex justify-content-between">
                           <Card.Text>{teacher}</Card.Text>
                           <Card.Text className='text-warning'>{price}</Card.Text>
                           </div>
                           <Card.Footer className="d-flex justify-content-between bg-white">
-                          <Card.Text className='text-warning'><BsStarFill/><BsStarFill/><BsStarFill/><BsStarFill/><BsStarHalf/></Card.Text>
+                          <Card.Text className='text-dark'><BsStarFill/><BsStarFill/><BsStarFill/><BsStarFill/><BsStarHalf/></Card.Text>
                           <Card.Text>{time}</Card.Text>
                           </Card.Footer>
+                          <Card.Text className="text-center">
+                          <button className="btn btn-warning shadow-2xl w-100 p-2 "><Link className="text-decoration-none text-white" to={`/course/${id}`}>SEE DETAILS</Link></button>
+                          </Card.Text>
                         </Card.Body>
+
                       </Card>
                     })
                 }

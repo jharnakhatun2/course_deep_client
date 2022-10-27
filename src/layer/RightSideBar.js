@@ -9,12 +9,12 @@ const RightSideBar = () => {
         .then(data => setCategories(data));
     }, [])
     return (
-        <div className="bg-light p-2">
-            <h5>All Categories</h5>
+        <div className="bg-light p-2 shadow">
+            <h5 className="mb-3">All Categories</h5>
             <div>
                 {
                     categories.map(category=><p key={category.id}>
-                        <Link to={`/course/${category.id}`}>{category.name}</Link>
+                        <Link className="text-decoration-none text-danger shadow" to={`/course/${category.id}`}>{category.name}</Link>
                     </p>)
                 }
             </div>

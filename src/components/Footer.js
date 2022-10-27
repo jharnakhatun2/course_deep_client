@@ -9,10 +9,10 @@ const Footer = () => {
             <div className="footer">
             <span className='footer-text'>© Copyright 2022 Jharna Khatun. All rights reserved.</span>
                 <div className="social-link">
-                <Link className='fa-style px-2'><FaFacebook/></Link>
-                <Link className='fa-style px-2'><FaInstagram/></Link>
-                <Link className='fa-style px-2'><FaTwitter/></Link>
-                <Link className='fa-style px-2'><FaLinkedin/></Link>
+                <Link className='fa-style px-1'><FaFacebook/></Link>
+                <Link className='fa-style px-1'><FaInstagram/></Link>
+                <Link className='fa-style px-1'><FaTwitter/></Link>
+                <Link className='fa-style px-1'><FaLinkedin/></Link>
                 </div> 
             </div>
         </footer>
