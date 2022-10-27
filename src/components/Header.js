@@ -1,7 +1,8 @@
 import React, { useContext } from 'react';
-import { Container, Nav, Navbar} from 'react-bootstrap';
+import { Container, Image, Nav, Navbar} from 'react-bootstrap';
 import { Link, NavLink} from 'react-router-dom';
 import { AuthContext } from '../layer/UserContext';
+import { FaUserCircle, IconName } from "react-icons/fa";
 
 const Header = () => {
   const {user, logOut} = useContext(AuthContext);
@@ -32,6 +33,11 @@ const Header = () => {
               : <NavLink  className ="nav-link px-3" to='/login'>Log In</NavLink>
             }
             {user?.email && <span className="text-white px-3">{user?.email}</span>}
+            {/* <NavLink eventKey ={2} href="#memes" className ="nav-link px-3">
+            {
+              user.photoURL ? <Image style={{height: '25px'}} roundedCircle src={user.photoURL}></Image> : <FaUserCircle/>
+            }
+            </NavLink> */}
          </Nav>
         </Navbar.Collapse>
       </Container>

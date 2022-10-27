@@ -1,8 +1,9 @@
-import React from 'react';
 import { Card } from 'react-bootstrap';
 import { BsBook, BsStopwatch } from 'react-icons/bs';
 
+
 const LeftSideBar = () => {
+
     return (
         <div>
             <h3> Course Features </h3>
@@ -40,14 +41,6 @@ const LeftSideBar = () => {
                 <Card.Text>Yes</Card.Text>
             </Card.Footer>
             </Card>
-
-            <div className="py-4">
-            <h3> Relevant Courses </h3>
-            <div className="d-flex justify-content-evenly">
-                <div><img src="" /></div>
-                <div>Course title</div> 
-            </div>
-            </div>
         </div>
     );
 };

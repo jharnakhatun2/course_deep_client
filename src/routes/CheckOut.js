@@ -77,7 +77,7 @@ const CheckOut = () => {
                             <hr className="my-5"></hr>
 
                             <div className="btn btn-warning w-100 p-3" type="submit">
-                                Continue to CheckOut
+                                Submit
                             </div>
                         </Form>
                     </Col>

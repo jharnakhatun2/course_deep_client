@@ -28,8 +28,8 @@ Preview Live : https://assignment-10-75df6.web.app/
 
 
 ## Server site  Link:
-Get all courses: https://openapi.programming-hero.com/api/quiz
-Get all courses category: https://openapi.programming-hero.com/api/quiz
-Get all Blogs: https://openapi.programming-hero.com/api/quiz
+Get all courses: https://assignment-ten-server-sage.vercel.app/courses
+Get all courses category: https://assignment-ten-server-sage.vercel.app/category
+Get all Blogs: https://assignment-ten-server-sage.vercel.app/blog
 
 

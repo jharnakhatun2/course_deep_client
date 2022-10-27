@@ -6,6 +6,7 @@ import { GoogleAuthProvider,signInWithPopup } from "firebase/auth";
 
 export const AuthContext = createContext();
 const auth = getAuth(app);
+
 const UserContext = ({children}) => {
     const [user, setUser] = useState({});
     const [loading, setLoading] = useState(true);

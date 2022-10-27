@@ -46,13 +46,8 @@ const Login = () => {
           <Form.Group className="mb-3" controlId="formBasicPassword">
             <Form.Label>Password</Form.Label>
             <Form.Control type="password" name='password' placeholder=" Enter password" required />
-
           </Form.Group>
-          <div>
-          <Form.Text className="text-muted">
-            Forgot password?<Link to="/login" className="btn btn-active btn-link">Log In</Link>
-          </Form.Text>
-          </div>
+          
           <Button className="btn btn-warning w-100" type="submit">
             Log In
           </Button>

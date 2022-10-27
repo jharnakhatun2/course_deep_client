@@ -4,6 +4,8 @@ import { Link } from 'react-router-dom';
 import { AuthContext } from '../layer/UserContext';
 import { FcGoogle} from "react-icons/fc";
 import { BsGithub} from "react-icons/bs";
+import { toast, ToastContainer } from 'react-toastify';
+import "react-toastify/dist/ReactToastify.css";
 
 const Register = () => {
 
@@ -50,7 +52,10 @@ const Register = () => {
         })
         .catch(error => console.error(error))
     }
-        
+    
+    const handleMessage = () =>{
+      toast.success('Thank you for your registration')
+    }
 
     
     return (
@@ -78,15 +83,14 @@ const Register = () => {
             Already have an account?<Link to="/login" className="btn btn-active btn-link">Log In</Link>
             </Form.Text>
             </div>
-            <Button className="btn btn-warning w-100" type="submit">
+            <Button onClick={handleMessage} className="btn btn-warning w-100" type="submit">
               Register
             </Button>
+            <ToastContainer/>
           </Form>
-          <div className="d-flex justify-content-between">
-          <button onClick={handleGoogleSignIn} className="btn btn-outline border-success my-3 w-50"><FcGoogle/> Google SignIn</button>
-          </div>
-          <div className="d-flex justify-content-between">
-          <button onClick={handleGithubSignIn} className="btn btn-outline bg-dark text-white w-50"><BsGithub/> Github SignIn</button>
+          <div className="mx-auto">
+          <button onClick={handleGoogleSignIn} className="btn btn-outline border-success my-3 w-75 mx-auto"><FcGoogle/> Google SignIn</button><br></br>
+          <button onClick={handleGithubSignIn} className="btn btn-outline bg-dark text-white w-75"><BsGithub/> Github SignIn</button>
           </div>
         </div>
       </div>
