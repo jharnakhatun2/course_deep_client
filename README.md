@@ -18,8 +18,10 @@ Preview Live : https://assignment-10-75df6.web.app
 - Loaded API and display data in dynamic routes
 - Integrated firebase Auth in my client site
 - Created private route for checkout page
-- Added different features-
-    - Added React Bootstrap
+using Technology-
+---------------------
+    - MongoDb
+    - React Bootstrap
     - React icon
     - React Toastify
     - UI responsive for any device and more...
