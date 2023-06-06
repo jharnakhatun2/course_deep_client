@@ -12,6 +12,7 @@ import Register from './components/Register';
 import Main from './layer/Main';
 import CheckOut from './routes/CheckOut';
 import PrivateRoutes from './routes/PrivateRoutes';
+import Home from './Pages/Home/Home';
 
 
 function App() {
@@ -22,6 +23,10 @@ function App() {
       children: [
         {
           path: "/",
+          element: <Home />,
+        },
+        {
+          path: "/courses",
           loader: async ()=>{
             return fetch('https://assignment-ten-server-sage.vercel.app/courses')
           },

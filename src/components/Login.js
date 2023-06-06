@@ -2,11 +2,13 @@ import React, { useContext } from 'react';
 import { Button,Form } from 'react-bootstrap';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { AuthContext } from '../layer/UserContext';
+import { FcGoogle } from 'react-icons/fc';
+import { BsGithub } from 'react-icons/bs';
 
 
 const Login = () => {
 
-  const { userLogIn } = useContext(AuthContext);
+  const { userLogIn,googleSignIn, gitHubSignIn } = useContext(AuthContext);
 
   // When login, will go to home page
   const navigate = useNavigate();
@@ -32,11 +34,30 @@ const Login = () => {
         console.error(error);
       });
   }
+
+  const handleGoogleSignIn =()=>{
+    googleSignIn()
+    .then(result => {
+        const user = result.user;
+        console.log(user);
+    })
+    .catch(error => console.error(error))
+}
+
+const handleGithubSignIn =()=>{
+    gitHubSignIn()
+    .then(result => {
+        const user = result.user;
+        console.log(user);
+    })
+    .catch(error => console.error(error))
+}
+
   return (
     <div className="logInSection">
-      <div className="p-5">
+      <div className="p-4 lg:p-5">
         <h1 className="text-3xl font-bold text-center">Login now!</h1>
-        <div className="w-50 mx-auto bg-light rounded p-5">
+        <div className="w-75 mx-auto bg-light rounded p-5">
         <Form onSubmit={handleLogin}>
           <Form.Group className="mb-3" controlId="formBasicEmail">
             <Form.Label>Email</Form.Label>
@@ -57,6 +78,10 @@ const Login = () => {
           </Form.Text>
           </div>
         </Form>
+        <div className="mx-auto">
+          <Button onClick={handleGoogleSignIn} className="btn btn-outline border-success my-3  mx-auto w-100"><FcGoogle/> Google SignIn</Button><br></br>
+          <Button onClick={handleGithubSignIn} className="btn btn-outline bg-dark text-white w-100 "><BsGithub/> Github SignIn</Button>
+          </div>
       </div>
     </div>
   </div>

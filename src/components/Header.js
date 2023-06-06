@@ -1,8 +1,8 @@
 import React, { useContext } from 'react';
 import { Container, Image, Nav, Navbar} from 'react-bootstrap';
-import { Link, NavLink} from 'react-router-dom';
+import {  Link, NavLink} from 'react-router-dom';
 import { AuthContext } from '../layer/UserContext';
-import { FaUserCircle, IconName } from "react-icons/fa";
+import { FaUserCircle } from "react-icons/fa";
 
 const Header = () => {
   const {user, logOut} = useContext(AuthContext);
@@ -17,27 +17,30 @@ const Header = () => {
   return (
     <Navbar bg="dark" variant="dark" expand="lg">
       <Container>
-        <Navbar.Brand className="navbar-brand text-warning clogo"><h3>CourseDeep</h3></Navbar.Brand>
+      
+        <Navbar.Brand className="navbar-brand "><Link className="clogo text-decoration-none text-warning"  to="/"><h3>CourseDeep</h3></Link></Navbar.Brand>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="ms-auto d-flex">
-            <NavLink className ="{({isActive})=> isActive ? 'active' : undefined} nav-link px-3" to='/' >Courses</NavLink>
-            <NavLink className ="nav-link px-3" to='/faq' >FAQ</NavLink>
-            <NavLink className ="nav-link px-3" to='/blog' >Blog</NavLink>
-            <NavLink className ="nav-link px-3" to='/checkout' >CheckOut</NavLink>
-            <NavLink className ="nav-link px-3" to="/register">Register</NavLink>
+            <NavLink className ="{({isActive})=> isActive ? 'active' : undefined} nav-link px-3 text-uppercase mx-1" to='/' >Home</NavLink>
+            <NavLink className ="nav-link px-3 text-uppercase mx-1" to='/courses' >Courses</NavLink>
+            <NavLink className ="nav-link px-3 text-uppercase mx-1" to='/blog' >Blog</NavLink>
+            
+            
             {/* toggle login and logout button */}
             {
-              user?.email?
-              <li onClick ={handleLogOut}><NavLink className ="nav-link px-3" to=''>Log Out</NavLink></li>
-              : <NavLink  className ="nav-link px-3" to='/login'>Log In</NavLink>
-            }
-            {user?.email && <span className="text-white px-3">{user?.email}</span>}
-            {/* <NavLink eventKey ={2} href="#memes" className ="nav-link px-3">
+              user?.email? <>
+              <li onClick ={handleLogOut}><NavLink className ="nav-link px-3 text-uppercase mx-1" to=''>Log Out</NavLink></li>
+              <NavLink eventKey ={2} href="#memes" className ="nav-link px-3 mx-1">
             {
-              user.photoURL ? <Image style={{height: '25px'}} roundedCircle src={user.photoURL}></Image> : <FaUserCircle/>
+              user?.email ? <FaUserCircle className="text-5xl w-f"/> : <Image style={{height: '25px'}} roundedCircle src={user?.photoURL}></Image>
             }
-            </NavLink> */}
+            </NavLink>
+              </>
+              : <NavLink className ="nav-link px-3 text-uppercase mx-1" to="/register">Register | Log In</NavLink>
+            }
+            
+            
          </Nav>
         </Navbar.Collapse>
       </Container>

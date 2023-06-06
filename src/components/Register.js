@@ -89,8 +89,8 @@ const Register = () => {
             <ToastContainer/>
           </Form>
           <div className="mx-auto">
-          <button onClick={handleGoogleSignIn} className="btn btn-outline border-success my-3 w-75 mx-auto"><FcGoogle/> Google SignIn</button><br></br>
-          <button onClick={handleGithubSignIn} className="btn btn-outline bg-dark text-white w-75"><BsGithub/> Github SignIn</button>
+          <button onClick={handleGoogleSignIn} className="btn btn-outline border-success my-3 w-100 mx-auto"><FcGoogle/> Google SignIn</button><br></br>
+          <button onClick={handleGithubSignIn} className="btn btn-outline bg-dark text-white w-100"><BsGithub/> Github SignIn</button>
           </div>
         </div>
       </div>
