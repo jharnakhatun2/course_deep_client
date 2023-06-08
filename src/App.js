@@ -1,7 +1,6 @@
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 import './App.css';
 import Blog from './components/Blog';
-import Blogs from './components/Blogs';
 import Course from './components/Course';
 import './components/Courses';
 import Courses from './components/Courses';
@@ -13,6 +12,9 @@ import Main from './layer/Main';
 import CheckOut from './routes/CheckOut';
 import PrivateRoutes from './routes/PrivateRoutes';
 import Home from './Pages/Home/Home';
+import BlogHome from './Pages/Blogs/BlogHome';
+import SingleBlog from './Pages/Blogs/SingleBlog';
+import UserDashboard from './Dashboard/UserDashboard';
 
 
 function App() {
@@ -52,14 +54,14 @@ function App() {
           loader: async ()=>{
             return fetch('https://assignment-ten-server-sage.vercel.app/blog')
           },
-          element: <Blogs />,
+          element: <BlogHome />,
         },
         {
           path: "/blog/:id",
           loader: async ({params})=>{
             return fetch(`https://assignment-ten-server-sage.vercel.app/blog/${params.id}`)
           },
-          element: <Blog />,
+          element: <SingleBlog />,
         },
         {
           path: "/checkout",
@@ -72,6 +74,10 @@ function App() {
         {
           path: "/login",
           element: <Login />,
+        },
+        {
+          path: "/dashboard",
+          element: <UserDashboard />,
         },
         {
           path:'*', 

@@ -6,7 +6,7 @@ import CounterValue from './CounterValue';
 const Category = () => {
     
   return (
-    <div class="container">
+    <div class="container py-5">
     <div class="text-center pt-5">
                     <h2 class="text-uppercase">Services</h2>
                     <p class="text-muted">We provide professional online courses</p>
