@@ -1,18 +1,37 @@
-import React from 'react'
-import { Link } from 'react-router-dom'
+import React from 'react';
+import { Slider } from './Slider';
 
 const Hero = () => {
+  const sliderSlides = [
+    {
+      image: 'https://i.ibb.co/L8B58Vf/slider6.png',
+      title: 'Started Coding Journey, Easy to Follow Guide to Programming',
+      description: 'This is the first slide',
+      buttonText: 'Learn More',
+    },
+    {
+      image: 'https://i.ibb.co/2gV7yxf/New-Project-2.png',
+      title: 'Unlocking Your Potential Through Programming',
+      description: 'This is the second slide',
+      buttonText: 'Get Started',
+    },
+    {
+      image: 'https://i.ibb.co/Z8C5V2W/New-Project-1.png',
+      title: 'Unleash the Power of Code, the Art of Programming',
+      description: 'This is the third slide',
+      buttonText: 'Explore',
+    },
+  ];
+  
+  
+  
   return (
-    <div>
-      <div className="hero-content text-center headerBG" >
-        <div className="max-w-md vw-100 mx-auto p-5 ">
-          <h1 className="text-5xl font-bold text-white pt-6">Learn Without Limit</h1>
-          <p className=" fontColor w-50 w-sm-100  mx-auto " >Start, switch, or advance your career with more than 5,200 courses, Professional Certificates, and degrees from world-class Web Skilled Courses.</p>
-          <button className="btn btn-warning shadow-2xl"><Link className="text-decoration-none text-white" to='/register'>JOIN FOR FREE</Link></button>
-        </div>
-      </div>
+    <div className=''>
+      <Slider className="vh-100" slides={sliderSlides} interval={3000} />
     </div>
   )
 }
 
 export default Hero
+
+

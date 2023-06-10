@@ -2,11 +2,13 @@ import React from "react";
 
 const About = () => {
   return (
-    <div class="container py-5">
-      <div class="text-center pb-4">
-        <h2 class="text-uppercase">Latest Courses</h2>
+    <div className="about-bg">
+    <div class="container py-5 mb-4">
+      <div class="text-center pt-5 pb-5">
+        <h2 class="text-uppercase title-shadow">About Us</h2>
+        <hr class="hr blurry-ruler " />
         <p class="text-muted">
-          An investment in knowledge pays the best interest
+        Discover Our Story - Unveiling the Journey of Course Deep
         </p>
       </div>
       <ul class="timeline">
@@ -20,15 +22,12 @@ const About = () => {
           </div>
           <div class="timeline-panel">
             <div class="timeline-heading">
-              <h4>2009-2011</h4>
+              <h4>July 2020</h4>
               <h4 class="subheading">Our Humble Beginnings</h4>
             </div>
             <div class="timeline-body">
               <p class="text-muted">
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt
-                ut voluptatum eius sapiente, totam reiciendis temporibus qui
-                quibusdam, recusandae sit vero unde, sed, incidunt et ea quo
-                dolore laudantium consectetur!
+              From humble beginnings, our programming platform emerged with a mission to empower aspiring coders. Join our journey as we inspire and educate developers worldwide.
               </p>
             </div>
           </div>
@@ -43,15 +42,12 @@ const About = () => {
           </div>
           <div class="timeline-panel">
             <div class="timeline-heading">
-              <h4>March 2011</h4>
-              <h4 class="subheading">An Agency is Born</h4>
+              <h4>March 2021</h4>
+              <h4 class="subheading">A Platform is Born</h4>
             </div>
             <div class="timeline-body">
               <p class="text-muted">
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt
-                ut voluptatum eius sapiente, totam reiciendis temporibus qui
-                quibusdam, recusandae sit vero unde, sed, incidunt et ea quo
-                dolore laudantium consectetur!
+              Witness the birth of a groundbreaking platform for programming courses. Dive into a world of immersive learning, expert guidance, and unparalleled resources. Join us on this transformative journey!
               </p>
             </div>
           </div>
@@ -66,15 +62,12 @@ const About = () => {
           </div>
           <div class="timeline-panel">
             <div class="timeline-heading">
-              <h4>December 2015</h4>
+              <h4>August 2022</h4>
               <h4 class="subheading">Transition to Full Service</h4>
             </div>
             <div class="timeline-body">
               <p class="text-muted">
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt
-                ut voluptatum eius sapiente, totam reiciendis temporibus qui
-                quibusdam, recusandae sit vero unde, sed, incidunt et ea quo
-                dolore laudantium consectetur!
+              Embark on our remarkable journey of transition to a full-service programming course website. Explore comprehensive offerings, from beginner to advanced, as we elevate your learning experience to new heights. Join us in embracing this exciting evolution!
               </p>
             </div>
           </div>
@@ -89,15 +82,12 @@ const About = () => {
           </div>
           <div class="timeline-panel">
             <div class="timeline-heading">
-              <h4>July 2020</h4>
+              <h4>June 2023</h4>
               <h4 class="subheading">Phase Two Expansion</h4>
             </div>
             <div class="timeline-body">
               <p class="text-muted">
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt
-                ut voluptatum eius sapiente, totam reiciendis temporibus qui
-                quibusdam, recusandae sit vero unde, sed, incidunt et ea quo
-                dolore laudantium consectetur!
+              Welcome to the Phase Two expansion of our programming course website! Immerse yourself in an enhanced learning environment, with an array of new courses, advanced tools, and expanded resources. Join us as we unlock the next level of your coding journey!
               </p>
             </div>
           </div>
@@ -114,6 +104,7 @@ const About = () => {
           </div>
         </li>
       </ul>
+    </div>
     </div>
   );
 };

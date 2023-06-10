@@ -1,6 +1,7 @@
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
+import "swiper/swiper-bundle.min.css";
+import "swiper/swiper.min.css";
 import './App.css';
-import Blog from './components/Blog';
 import Course from './components/Course';
 import './components/Courses';
 import Courses from './components/Courses';
@@ -15,6 +16,7 @@ import Home from './Pages/Home/Home';
 import BlogHome from './Pages/Blogs/BlogHome';
 import SingleBlog from './Pages/Blogs/SingleBlog';
 import UserDashboard from './Dashboard/UserDashboard';
+
 
 
 function App() {

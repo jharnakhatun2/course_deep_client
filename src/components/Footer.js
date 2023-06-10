@@ -17,31 +17,31 @@ const Footer = () => {
           <div class="col-lg-4 my-3 my-lg-0 text-lg-center">
             <a
               class="btn btn-dark btn-social mx-2"
-              href="#!"
+              href="https://twitter.com/javaScripLogic"
               aria-label="Parveen Anand Twitter Profile"
             >
               <FontAwesomeIcon icon={faTwitter} />
             </a>
             <a
               class="btn btn-dark btn-social mx-2"
-              href="#!"
+              href="https://www.facebook.com/jharnakhatun2/"
               aria-label="Parveen Anand Facebook Profile"
             >
               <FontAwesomeIcon icon={faFacebook} />
             </a>
             <a
               class="btn btn-dark btn-social mx-2"
-              href="#!"
+              href="https://www.linkedin.com/in/jharna-khatun2/"
               aria-label="Parveen Anand LinkedIn Profile"
             >
               <FontAwesomeIcon icon={faLinkedin} />
             </a>
           </div>
           <div class="col-lg-4 text-lg-end">
-            <a class="link-dark text-decoration-none me-3" href="#!">
+            <a class="link-dark text-decoration-none me-3" href="/">
               Privacy Policy
             </a>
-            <a class="link-dark text-decoration-none" href="#!">
+            <a class="link-dark text-decoration-none" href="/">
               Terms of Use
             </a>
           </div>
