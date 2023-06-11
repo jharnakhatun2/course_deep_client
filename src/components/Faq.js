@@ -5,7 +5,7 @@ import Accordion from "react-bootstrap/Accordion";
 const Faq = () => {
   return (
     <div className="faqBG pb-4">
-    <div className=" container py-5 mx-auto">
+    <div className=" container py-lg-5 py-sm-3 mx-auto">
       <div className="text-center pt-5 pb-5">
         <h2 className="text-uppercase title-shadow">FAQ</h2>
         <hr className="hr blurry-ruler" />

@@ -20,8 +20,8 @@ export const Slider = ({ slides, interval }) => {
             key={index}
             className={`carousel-item${index === currentSlideIndex ? ' active' : ''}`}
           >
-            <div className=''>
-            <img src={slide.image} className="d-block w-100 vh-100 max-w-100" alt={`Slide ${index}`} />
+            <div>
+            <img src={slide.image} className="d-block w-100  max-w-100" alt={`Slide ${index}`} />
             <div className="carouselTitle">
                <h3 className='text-responsive fw-bold text-uppercase text-white'>{slide.title}</h3>
             </div>

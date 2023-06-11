@@ -62,7 +62,7 @@ const Register = () => {
         <div className="regis-section">
         <div className="p-5">
           <h1 className="text-3xl font-bold text-center">Register now!</h1>
-          <div className="w-50 mx-auto bg-light rounded p-5">
+          <div className="col-lg-4 col-md-6 mx-auto bgColorRegister rounded p-5">
           <Form onSubmit={handleRegister}>
 
             <Form.Group className="mb-3" controlId="formBasicEmail">

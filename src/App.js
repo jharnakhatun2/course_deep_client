@@ -16,6 +16,10 @@ import Home from './Pages/Home/Home';
 import BlogHome from './Pages/Blogs/BlogHome';
 import SingleBlog from './Pages/Blogs/SingleBlog';
 import UserDashboard from './Dashboard/UserDashboard';
+import { News } from './Pages/Blogs/News';
+import { NewsDetails } from './Pages/Blogs/NewsDetails';
+
+
 
 
 
@@ -53,18 +57,20 @@ function App() {
         },
         {
           path: "/blog",
-          loader: async ()=>{
-            return fetch('https://assignment-ten-server-sage.vercel.app/blog')
-          },
           element: <BlogHome />,
         },
         {
-          path: "/blog/:id",
-          loader: async ({params})=>{
-            return fetch(`https://assignment-ten-server-sage.vercel.app/blog/${params.id}`)
-          },
+          path: "/blog/:title",
           element: <SingleBlog />,
         },
+        {
+          path: "/news",
+          element: <News />,
+        },
+        {
+          path: "/news/:id",
+          element: <NewsDetails />,
+        },        
         {
           path: "/checkout",
           element: <PrivateRoutes><CheckOut/></PrivateRoutes>,

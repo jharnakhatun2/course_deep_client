@@ -11,36 +11,34 @@ const Courses = () => {
   const { user } = useContext(AuthContext);
   return (
     <div>
-      <header class="bg-dark py-5">
-        <div class="container px-5">
-          <div class="row gx-5 align-items-center justify-content-center">
-            <div class="col-lg-8 col-xl-7 col-xxl-6">
-              <div class="my-5 text-center text-xl-start">
-                <h1 class="course-header fw-bolder text-white mb-2">
-                  A Bootstrap 5 template for modern businesses
+      <header className="bg-dark py-5">
+        <div className="container px-5">
+          <div className="row gx-5 align-items-center justify-content-center">
+            <div className="col-lg-8 col-xl-7 col-xxl-6">
+              <div className="my-5 text-center text-xl-start">
+                <h1 className="course-header fw-bolder text-white mb-2">
+                The Ultimate Guide to Course Deep : Transform Your Knowledge
                 </h1>
-                <p class="lead fw-normal text-white-50 mb-4">
-                  Quickly design and customize responsive mobile-first sites
-                  with Bootstrap, the world’s most popular front-end open source
-                  toolkit!
+                <p className="lead fw-normal fs-6 text-white-50 mb-4">
+                Elevate your expertise, broaden your horizons, and embark on a transformative learning journey with the ultimate guide to the Deep course.
                 </p>
-                <div class="d-grid gap-3 d-sm-flex justify-content-sm-center justify-content-xl-start">
+                <div className="d-grid gap-3 d-sm-flex justify-content-sm-center justify-content-xl-start">
                   <a
-                    class="btn btn-primary btn-lg px-4 me-sm-3"
+                    className="btn btn-warning btn-lg px-4 me-sm-3"
                     href="#features"
                   >
                     Get Started
                   </a>
-                  <a class="btn btn-outline-light btn-lg px-4" href="#!">
+                  <a className="btn btn-outline-light btn-lg px-4" href="#">
                     Learn More
                   </a>
                 </div>
               </div>
             </div>
-            <div class="col-xl-5 col-xxl-6 d-none d-xl-block text-center">
+            <div className="col-xl-5 col-xxl-6 d-none d-xl-block text-center">
               <img
-                class="img-fluid rounded-3 my-5"
-                src="https://dummyimage.com/600x400/343a40/6c757d"
+                className="img-fluid rounded-3 my-5"
+                src="https://i.ibb.co/YLFDkgr/course-h.png"
                 alt="..."
               />
             </div>
@@ -58,9 +56,7 @@ const Courses = () => {
                     id,
                     name,
                     image,
-                    description,
                     price,
-                    ratings,
                     shortDes,
                     teacher,
                     time,

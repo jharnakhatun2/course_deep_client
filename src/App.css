@@ -7,6 +7,7 @@ h2 {
 
 .clogo {
   font-family: "Lobster", cursive;
+  font-size: 40px;
 }
 p {
   font-family: "Poppins", sans-serif;
@@ -32,6 +33,9 @@ p {
   background-color: #ffc107;
   color: #100f0f !important;
   border-radius: 5px;
+}
+.navBorder{
+  border-bottom: 1px solid #ffc107;
 }
 .headerBG {
   max-width: 100%;
@@ -75,12 +79,16 @@ p {
     transform: rotate(360deg);
   }
 }
+
 /* Hero section style */
 .text-responsive {
   font-size: 5vw;
 }
 
 /* Login and registration form responsivename */
+.bgColorRegister{
+  background-color: #e7e6e6;
+}
 .logInSection {
   background: url("./components/images/bg1.png") no-repeat fixed center;
   min-height: 77vh;
@@ -188,6 +196,17 @@ section {
 .cardFooter:hover {
   color: #ffc107;
 }
+.socialButtonStyle{
+  color: #ffc107;
+}
+.socialButtonStyle:hover{
+  color: #ffffff;
+}
+.sticky {
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+}
 
 /*Footer Design*/
 .footer {
@@ -197,15 +216,20 @@ section {
   justify-items: center;
   padding: 2rem 0;
 }
-.footer-text {
-  color: #afafaf;
-}
 .fa-style {
   color: #ffc107;
   margin: 0 0.2rem;
   font-size: 20px;
 }
-
+.footerBG{
+  background-color: rgb(0, 0, 0);
+}
+.fontColor{
+  color: #7a7a7a;
+}
+footer a:hover{
+  color: #a8a6a6;
+}
 /* responsive section */
 @media screen and (min-width: 600px) {
   section {
@@ -650,6 +674,10 @@ transform: rotate(45deg);
   max-width: 20%;
   max-height: 20%;
 }
+.singleBlogAvetar{
+  max-width: 7%;
+  max-height: 7%;
+}
 .imageContainer{
   position: relative;
   width: 100%;
@@ -696,6 +724,9 @@ transform: rotate(45deg);
 .textOverlay a{
   color: white;
   text-decoration: none;
+}
+.singleBlogText{
+  font-size: 16px;
 }
 /* Dashboard Style */
 #wrapper {

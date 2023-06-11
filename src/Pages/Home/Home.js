@@ -10,6 +10,8 @@ import Subscribe from '../Subscribe/Subscribe'
 import LatestBlog from '../LatestBlog/LatestBlog'
 import Code from '../Code/Code'
 
+
+
 const Home = () => {
   return (
     <div>

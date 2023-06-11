@@ -27,7 +27,7 @@ const Hero = () => {
   
   return (
     <div className=''>
-      <Slider className="vh-100" slides={sliderSlides} interval={3000} />
+      <Slider className="" slides={sliderSlides} interval={3000} />
     </div>
   )
 }

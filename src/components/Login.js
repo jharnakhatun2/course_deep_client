@@ -57,7 +57,7 @@ const handleGithubSignIn =()=>{
     <div className="logInSection">
       <div className="p-4 lg:p-5">
         <h1 className="text-3xl font-bold text-center">Login now!</h1>
-        <div className="w-75 mx-auto bg-light rounded p-5">
+        <div className="col-lg-4 col-md-6 mx-auto bg-light rounded p-5">
         <Form onSubmit={handleLogin}>
           <Form.Group className="mb-3" controlId="formBasicEmail">
             <Form.Label>Email</Form.Label>

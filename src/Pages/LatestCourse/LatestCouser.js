@@ -28,7 +28,7 @@ const LatestCouser = () => {
   const courseData = faceData.slice(0, 4);
   return (
     <div className="aboutusbg">
-    <div className="container py-5">
+    <div className="container py-lg-5 py-sm-3 ">
       <div className="text-center pt-5 pb-5">
         <h2 className="text-uppercase title-shadow">Latest Courses</h2>
         <hr className="hr blurry-ruler" />
@@ -37,19 +37,19 @@ const LatestCouser = () => {
         </p>
       </div>
       {/* Product Card */}
-      <div class="row">
+      <div className="row">
         {courseData.map((face) => {
-          const { _id, name, image, price, shortDes, teacher, time } = face;
+          const { id, name, image, price, shortDes, teacher, time } = face;
           return (
-            <div key={_id} class="col-lg-3 col-md-6 mb-4 mb-lg-0">
-              <div class="card">
+            <div key={id} className="col-lg-3 col-md-6 mb-4 mb-lg-0">
+              <div className="card">
                 <a href="#">
-                  <img class="card-img-top" src={image} alt="Card image cap" />
-                  <div class="card-body">
-                    <h5 class="card-title">{name.slice(0, 20)}</h5>
-                    <p class="card-text">{shortDes.slice(0, 62) + ".."}</p>
-                    <p class="card-text">
-                      <small class="text-muted">
+                  <img className="card-img-top" src={image} alt="Card image cap" />
+                  <div className="card-body">
+                    <h5 className="card-title">{name.slice(0, 20)}</h5>
+                    <p className="card-text">{shortDes.slice(0, 62) + ".."}</p>
+                    <p className="card-text">
+                      <small className="text-muted">
                         <FontAwesomeIcon icon={faUser} className="cardIcon" />
                         {teacher.slice(0, 7)}
                         <FontAwesomeIcon icon={faClock} className="cardIcon" />

@@ -36,7 +36,7 @@ const Instructor = () => {
 
   return (
     <div className='bg-light'>
-    <div className="container py-5">
+    <div className="container py-lg-5 py-sm-3">
       <div className="text-center pt-5 pb-5">
         <h2 className="text-uppercase title-shadow">Best Instructors</h2>
         <hr className="hr blurry-ruler" />
