@@ -13,7 +13,7 @@ const Login = () => {
   // When login, will go to home page
   const navigate = useNavigate();
   const location = useLocation();
-  const from = location.state?.from?.pathname || '/checkout';
+  const from = location.state?.from?.pathname || '/';
 
   const handleLogin = event => {
     event.preventDefault();
@@ -40,6 +40,7 @@ const Login = () => {
     .then(result => {
         const user = result.user;
         console.log(user);
+        navigate(from, { replace: true });
     })
     .catch(error => console.error(error))
 }
@@ -49,6 +50,7 @@ const handleGithubSignIn =()=>{
     .then(result => {
         const user = result.user;
         console.log(user);
+        navigate(from, { replace: true });
     })
     .catch(error => console.error(error))
 }
