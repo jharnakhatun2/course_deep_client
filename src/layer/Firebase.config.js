@@ -5,15 +5,14 @@ import { initializeApp } from "firebase/app";
 
 // Your web app's Firebase configuration
 const firebaseConfig = {
-  apiKey: "AIzaSyCDynk7NhKUuKSmHqq3erNGh6dfKQQAl7I",
-  authDomain: "assignment-10-75df6.firebaseapp.com",
-  projectId: "assignment-10-75df6",
-  storageBucket: "assignment-10-75df6.appspot.com",
-  messagingSenderId: "126162462723",
-  appId: "1:126162462723:web:52f273470889bd02864636"
+  apiKey: "AIzaSyBf1PYlRhbKSawZmlrbfqM6FpopQs3Qdu4",
+  authDomain: "course-deep.firebaseapp.com",
+  projectId: "course-deep",
+  storageBucket: "course-deep.appspot.com",
+  messagingSenderId: "39392239108",
+  appId: "1:39392239108:web:c861fbb290512fae565f51"
 };
 
 // Initialize Firebase
 const app = initializeApp(firebaseConfig);
-
 export default app;
