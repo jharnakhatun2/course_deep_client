@@ -1,9 +1,8 @@
-// Import the functions you need from the SDKs you need
+// src/layer/Firebase.config.js
 import { initializeApp } from "firebase/app";
-// TODO: Add SDKs for Firebase products that you want to use
-// https://firebase.google.com/docs/web/setup#available-libraries
+import { getAuth } from "firebase/auth";
+import { getFirestore } from "firebase/firestore";
 
-// Your web app's Firebase configuration
 const firebaseConfig = {
   apiKey: "AIzaSyBf1PYlRhbKSawZmlrbfqM6FpopQs3Qdu4",
   authDomain: "course-deep.firebaseapp.com",
@@ -13,6 +12,7 @@ const firebaseConfig = {
   appId: "1:39392239108:web:c861fbb290512fae565f51"
 };
 
-// Initialize Firebase
 const app = initializeApp(firebaseConfig);
+export const auth = getAuth(app);
+export const db = getFirestore(app);
 export default app;
