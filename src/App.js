@@ -1,9 +1,10 @@
 import { createBrowserRouter, RouterProvider } from 'react-router';
-import "swiper/swiper-bundle.min.css";
-import "swiper/swiper.min.css";
+import "swiper/css";               // ✅ new way
+import "swiper/css/navigation";    // optional
+import "swiper/css/pagination";    // optional
 import './App.css';
+
 import Course from './components/Course';
-import './components/Courses';
 import Courses from './components/Courses';
 import Error from './components/Error';
 import Faq from './components/Faq';
@@ -19,86 +20,45 @@ import UserDashboard from './Dashboard/UserDashboard';
 import { News } from './Pages/Blogs/News';
 import { NewsDetails } from './Pages/Blogs/NewsDetails';
 
-
-
-
-
 function App() {
   const router = createBrowserRouter([
     {
       path: "/",
       element: <Main />,
       children: [
-        {
-          path: "/",
-          element: <Home />,
-        },
+        { path: "/", element: <Home /> },
         {
           path: "/courses",
-          loader: async ()=>{
-            return fetch('https://assignment-ten-server-sage.vercel.app/courses')
+          loader: async () => {
+            return fetch('https://assignment-ten-server-sage.vercel.app/courses');
           },
           element: <Courses />,
         },
         {
           path: "/course/:id",
-          loader: async ({params})=>{
-            return fetch(`https://assignment-ten-server-sage.vercel.app/courses/${params.id}`)
+          loader: async ({ params }) => {
+            return fetch(`https://assignment-ten-server-sage.vercel.app/courses/${params.id}`);
           },
           element: <Course />,
         },
-        {
-          path: "/course/:id",
-          element: <Course />,
-        },
-        {
-          path: "/faq",
-          element: <Faq />,
-        },
-        {
-          path: "/blog",
-          element: <BlogHome />,
-        },
-        {
-          path: "/blog/:title",
-          element: <SingleBlog />,
-        },
-        {
-          path: "/news",
-          element: <News />,
-        },
-        {
-          path: "/news/:id",
-          element: <NewsDetails />,
-        },        
+        { path: "/faq", element: <Faq /> },
+        { path: "/blog", element: <BlogHome /> },
+        { path: "/blog/:title", element: <SingleBlog /> },
+        { path: "/news", element: <News /> },
+        { path: "/news/:id", element: <NewsDetails /> },
         {
           path: "/checkout",
-          element: <PrivateRoutes><CheckOut/></PrivateRoutes>,
+          element: <PrivateRoutes><CheckOut /></PrivateRoutes>,
         },
-        {
-          path: "/register",
-          element: <Register />,
-        },
-        {
-          path: "/login",
-          element: <Login />,
-        },
-        {
-          path: "/dashboard",
-          element: <UserDashboard />,
-        },
-        {
-          path:'*', 
-          element:<Error/>
-        }
-      ]
+        { path: "/register", element: <Register /> },
+        { path: "/login", element: <Login /> },
+        { path: "/dashboard", element: <UserDashboard /> },
+        { path: "*", element: <Error /> },
+      ],
     },
   ]);
-  return (
-    <div>
-      <RouterProvider router={router}></RouterProvider>
-    </div>
-  );
+
+  return <RouterProvider router={router} />;
 }
 
 export default App;
