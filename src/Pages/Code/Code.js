@@ -1,6 +1,4 @@
-import { faMobileScreen, faPencil, faQuestion, faThumbsUp } from '@fortawesome/free-solid-svg-icons'
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import React from 'react'
+
 
 const Code = () => {
   return (

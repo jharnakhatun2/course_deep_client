@@ -6,7 +6,7 @@ import jsPDF from 'jspdf';
 
 const Course = () => {
     const singleCourse = useLoaderData();
-    const { id, name, image, description, price, ratings, shortDes, teacher, time } = singleCourse;
+    const { name, image, description, price, ratings, shortDes, teacher} = singleCourse;
 
     const pdfGenerate = () => {
         const doc = new jsPDF('landscape', 'px', 'a4', 'false');
@@ -37,7 +37,7 @@ const Course = () => {
                             <Link className="btn btn-dark" to="/checkout">Get Premium</Link>
                         </div>
                         <hr></hr>
-                        <div className="text-center" ><img src={image} /></div>
+                        <div className="text-center" ><img src={image} alt={name} /></div>
 
                         <div className="d-flex justify-content-between mt-2">
                             <h6>Mentor : <span className="text-warning">{teacher}</span></h6>

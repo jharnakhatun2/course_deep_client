@@ -10,10 +10,6 @@ const UserDashboard = () => {
     
         const sidebarToggle = document.body.querySelector('#sidebarToggle');
         if (sidebarToggle) {
-          // Uncomment Below to persist sidebar toggle between refreshes
-          // if (localStorage.getItem('sb|sidebar-toggle') === 'true') {
-          //     document.body.classList.toggle('sb-sidenav-toggled');
-          // }
           sidebarToggle.addEventListener('click', handleSidebarToggle);
         }
     
@@ -50,7 +46,7 @@ const UserDashboard = () => {
                             <ul className="navbar-nav ms-auto mt-2 mt-lg-0">
                                 <li className="nav-item active"><a className="nav-link" href="#">Home</a></li>
                                 <li className="nav-item"><a className="nav-link" href="#">Link</a></li>
-                                <li className="nav-item dropdown">
+                                {/* <li className="nav-item dropdown">
                                     <a className="nav-link dropdown-toggle" id="navbarDropdown" href="#" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Dropdown</a>
                                     <div className="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
                                         <a className="dropdown-item" href="#">Action</a>
@@ -58,7 +54,7 @@ const UserDashboard = () => {
                                         <div className="dropdown-divider"></div>
                                         <a className="dropdown-item" href="#">Something else here</a>
                                     </div>
-                                </li>
+                                </li> */}
                             </ul>
                         </div>
                     </div>
