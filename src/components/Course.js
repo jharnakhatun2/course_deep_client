@@ -1,5 +1,5 @@
 import { Button, Col, Container, Row } from 'react-bootstrap';
-import { Link, useLoaderData } from 'react-router-dom';
+import { Link, useLoaderData } from 'react-router';
 import LeftSideBar from './LeftSideBar';
 import jsPDF from 'jspdf';
 

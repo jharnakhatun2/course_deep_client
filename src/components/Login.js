@@ -1,6 +1,6 @@
 import React, { useContext } from 'react';
 import { Button,Form } from 'react-bootstrap';
-import { Link, useLocation, useNavigate } from 'react-router-dom';
+import { Link, useLocation, useNavigate } from 'react-router';
 import { AuthContext } from '../layer/UserContext';
 import { FcGoogle } from 'react-icons/fc';
 import { BsGithub } from 'react-icons/bs';

@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react'
-import { useParams } from 'react-router-dom';
+import { useParams } from 'react-router';
 
 export const NewsDetails = () => {
   const [newsData, setNewsData] = useState(null);

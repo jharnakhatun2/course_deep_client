@@ -1,6 +1,6 @@
 import React, { useContext } from "react";
 import { Container, Image, Nav, Navbar } from "react-bootstrap";
-import { Link, NavLink } from "react-router-dom";
+import { Link, NavLink } from "react-router";
 import { AuthContext } from "../layer/UserContext";
 import { FaUserCircle } from "react-icons/fa";
 
